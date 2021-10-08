@@ -1,0 +1,2 @@
+seed;final_cost;planning_time;nodes;collisions
+201;0;0.001;3;6

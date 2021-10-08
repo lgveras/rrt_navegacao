@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BialkowskiCollisionChecker.cpp" />
+    <ClCompile Include="BinaryGrid.cpp" />
+    <ClCompile Include="BITStar.cpp" />
+    <ClCompile Include="CellGrid.cpp" />
+    <ClCompile Include="CollisionCheckerDisplayer.cpp" />
+    <ClCompile Include="CollisionCheckerSample.cpp" />
+    <ClCompile Include="CurveCollisionChecker.cpp" />
+    <ClCompile Include="EnvironmentDisplayer.cpp" />
+    <ClCompile Include="GraphDisplayer.cpp" />
+    <ClCompile Include="Graphics.cpp" />
+    <ClCompile Include="InformedRRTStar.cpp" />
+    <ClCompile Include="KDTree.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MathUtils.cpp" />
+    <ClCompile Include="NavigationEnvironment.cpp" />
+    <ClCompile Include="Node.cpp" />
+    <ClCompile Include="NodeGraph.cpp" />
+    <ClCompile Include="NodeStar.cpp" />
+    <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="PlanarPH.cpp" />
+    <ClCompile Include="ResultOutputer.cpp" />
+    <ClCompile Include="Route.cpp" />
+    <ClCompile Include="RRT.cpp" />
+    <ClCompile Include="RRTCurve.cpp" />
+    <ClCompile Include="RRTDisplayer.cpp" />
+    <ClCompile Include="RRTGrid.cpp" />
+    <ClCompile Include="RRTStar.cpp" />
+    <ClCompile Include="RRTStarSmart.cpp" />
+    <ClCompile Include="RRTStarSukharevVertices.cpp" />
+    <ClCompile Include="SearchGrid.cpp" />
+    <ClCompile Include="StaticObstacle.cpp" />
+    <ClCompile Include="SukharevGrid.cpp" />
+    <ClCompile Include="VisibilityGraph.cpp" />
+    <ClCompile Include="Waypoint.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BialkowskiCollisionChecker.h" />
+    <ClInclude Include="BinaryGrid.h" />
+    <ClInclude Include="BITStar.h" />
+    <ClInclude Include="CellGrid.h" />
+    <ClInclude Include="CGALDefinitions.h" />
+    <ClInclude Include="CollisionCheckerDisplayer.h" />
+    <ClInclude Include="CollisionCheckerSample.h" />
+    <ClInclude Include="CurveCollisionChecker.h" />
+    <ClInclude Include="Displayable.h" />
+    <ClInclude Include="EnvironmentDisplayer.h" />
+    <ClInclude Include="GraphDisplayer.h" />
+    <ClInclude Include="Graphics.h" />
+    <ClInclude Include="GridEnum.h" />
+    <ClInclude Include="InformedRRTStar.h" />
+    <ClInclude Include="KDTree.h" />
+    <ClInclude Include="NodeGraph.h" />
+    <ClInclude Include="NodePointerCompare.h" />
+    <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="NavigationEnvironment.h" />
+    <ClInclude Include="Node.h" />
+    <ClInclude Include="NodeStar.h" />
+    <ClInclude Include="Cell.h" />
+    <ClInclude Include="PlanarPH.h" />
+    <ClInclude Include="PointPH.h" />
+    <ClInclude Include="ResultOutputer.h" />
+    <ClInclude Include="Route.h" />
+    <ClInclude Include="RRT.h" />
+    <ClInclude Include="RRTCurve.h" />
+    <ClInclude Include="RRTDisplayer.h" />
+    <ClInclude Include="RRTGrid.h" />
+    <ClInclude Include="RRTStar.h" />
+    <ClInclude Include="RRTStarSmart.h" />
+    <ClInclude Include="RRTStarSukharevVertices.h" />
+    <ClInclude Include="SearchGrid.h" />
+    <ClInclude Include="StaticObstacle.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SukharevGrid.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="VisibilityGraph.h" />
+    <ClInclude Include="Waypoint.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ANN\ANN.vcxproj">
+      <Project>{0f38e0c0-df54-4246-a417-2da703a73830}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\PHQuintic\PHQuintic.vcxproj">
+      <Project>{7daf7e7f-e4d1-4e2c-95cd-c209839d7676}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="inputs.txt" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A0388E95-861B-4B2A-828B-E2148ACE0BB6}</ProjectGuid>
+    <RootNamespace>RRT</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\Users\Luiz Gustavo Véras\Downloads\freeglut-MSVC-3.0.0-2.mp\freeglut\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Luiz Gustavo Véras\Downloads\freeglut-MSVC-3.0.0-2.mp\freeglut\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ExcludePath>C:\Program Files (x86)\Windows Kits\8.1\Include\um\gl;$(ExcludePath)</ExcludePath>
+    <IncludePath>C:\dev\freeglut\include\GL;$(WindowsSDK_IncludePath);$(VC_IncludePath);$(IncludePath)</IncludePath>
+    <LibraryPath>C:\dev\freeglut\bin\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(BOOST_INCLUDEDIR);$(CGAL_DIR)\auxiliary\gmp\include;$(CGAL_DIR)\include;$(CGAL_DIR)\build\include;$(CGAL_DIR);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;libgmp-10.lib;libmpfr-4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(BOOST_LIBRARYDIR);$(CGAL_DIR)/build/lib/$(Configuration);$(CGAL_DIR)/auxiliary/gmp/lib;$(CGAL_DIR)/build/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\dev\CGAL-5.1\include;C:\dev\CGAL-5.1\auxiliary\gmp\include;C:\dev\freeglut\include\GL;$(SolutionDir)PHQuintic\;C:\dev\eigen-eigen-b3f3d4950030;C:\dev\vcpkg\installed\x64-windows\include;C:\dev\pngwriter\src;C:\dev\zlib64;C:\dev\lpng1637;C:\dev\zlib;$(SolutionDir)ANN;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <AdditionalOptions>-DNO_FREETYPE</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:/dev/freeglut/lib/x64;C:\dev\pngwriter64\Release;C:\dev\libpng64\Release;C:\dev\zlib64\Release;C:\dev\CGAL-5.1\auxiliary\gmp\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <Link>
+      <AdditionalDependencies>libgmp-10.lib;libmpfr-4.lib;opengl32.lib;freeglut.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\dev\freeglut\include\GL;C:\dev\CGAL-5.1\include;C:\dev\CGAL-5.1\auxiliary\gmp\include;C:\dev\vcpkg\installed\x64-windows\include;C:\C++ Projects\RRT\PHQuintic;C:\C++ Projects\RRT\HashMap;C:\dev\ann_1.1.2\include\ANN;C:\dev\eigen-eigen-b3f3d4950030;C:\dev\lpng1637;C:\dev\zlib64;C:\dev\pngwriter\src;C:\dev\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions>-DNO_FREETYPE</AdditionalOptions>
+      <LanguageStandard>stdcpp14</LanguageStandard>
+      <ConformanceMode>false</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:/dev/freeglut/lib/x64;C:\dev\pngwriter64\Release;C:\dev\libpng64\Release;C:\dev\zlib64\Release;C:\dev\CGAL-5.1\auxiliary\gmp\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>freeglut.lib;opengl32.lib;PNGwriter.lib;libpng16.lib;zlib.lib;libmpfr-4.lib;libgmp-10.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+      <StackReserveSize>1000000</StackReserveSize>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

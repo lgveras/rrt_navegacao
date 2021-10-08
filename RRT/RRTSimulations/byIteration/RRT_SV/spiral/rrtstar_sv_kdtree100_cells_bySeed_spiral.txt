@@ -1,0 +1,3 @@
+seed;final_cost;planning_time;nodes;collisions
+1;2302.14;5.036;7983;38051
+1;2302.14;5.019;10698;50133

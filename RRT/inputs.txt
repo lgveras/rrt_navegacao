@@ -1,0 +1,29 @@
+/*
+*Números das RRTs para seleção na simulação
+*/
+
+1 - RRT*-Smart
+2 - RRT*-SukharevVertices
+3 - RRT*
+4 - RRT*-SukharevGrid
+5 - RRT - WorcapExperiment
+6 - RRT com teste em zigzag 
+7 - RRT-Curve
+8 - RRTGrid-Lattice
+9 - Informed RRT*
+10 - RRT*-Vision
+11 - RRT*-Vertices (Sem grade de Sukharev)
+12 - RRT*-SV NoOpt (Sem otimização na amostragem)
+13 - BIT*
+15 - RRT*-Vision NoRandomSample
+
+"C:/RRTSimulations/navEnvs/binary_grid_40x40_cluttered5Obstacles.txt" 10 "natural" 2000 25 25 975 975 2
+"C:/RRTSimulations/navEnvs/binary_grid_280x280_cluttered10000Obstacles.txt" 10 "cluttered10000Obstacles" 30000 25 25 970 970 1
+
+/*
+* Inputs configurados para rodar os algoritmos por tempo de simulação
+*/
+"C:/RRTSimulations/navEnvs/binary_grid_40x40_maze_narrowpassage.txt" 9 "maze_narrowpassage" 5 25 25 975 975 1
+"C:/RRTSimulations/navEnvs/binary_grid_40x40_maze_narrowpassage.txt" 13 "maze_narrowpassage" 5 25 25 975 975 1
+"C:/RRTSimulations/navEnvs/binary_grid_40x40_maze_narrowpassage.txt" 10 "maze_narrowpassage" 5 25 25 975 975 1
+"C:/RRTSimulations/navEnvs/binary_grid_40x40_maze_narrowpassage.txt" 15 "maze_narrowpassage" 5 25 25 975 975 1

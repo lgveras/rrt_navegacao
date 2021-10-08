@@ -1,0 +1,63 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/* 
+ * File:   MathUtils.h
+ * Author: LuizGustavo
+ *
+ * Created on 8 de Agosto de 2016, 16:25
+ */
+
+#ifndef MATHUTILS_H
+#define MATHUTILS_H
+
+//#include <CGAL/Exact_predicates_exact_constructions_kernel.h>
+#include "Node.h"
+#include "NodeStar.h"
+#include  <random>
+#include  <iterator>
+#include "CGALDefinitions.h"
+
+//typedef CGAL::Exact_predicates_exact_constructions_kernel K;
+//typedef K::Point_2 Point_2;
+
+class MathUtils {
+public:
+    MathUtils();
+    MathUtils(const MathUtils& orig);
+    virtual ~MathUtils();
+    static double euclidianDistanceNode(Node* p1, Node* p2);
+	static double euclidianDistancePoint(Point_2* p1, Point_2* p2);
+	static double euclidianDistance(float x1, float y1, float x2, float y2);
+	static double houghDistancePoint(Point_2* origin, Point_2* end, Point_2* p);
+    static void change(float* value1, float* value2 );
+	static double transformed(Point_2 * p, double deltaX, double deltaY);
+
+	template<class Element, typename Iter>
+	static Element vectorRandomSelection(Iter start, Iter end){
+		std::random_device rd;
+		std::mt19937 generator(rd());
+		//generator.seed(seed);
+		std::template uniform_int_distribution<> distribution(0, std::distance(start, end) - 1);
+		std::template advance(start, distribution(generator));
+		return *start;
+	};
+	static bool compareIntArrays(int * pt1Init, int* pt1End, int *pt2Init);
+	//static NodeStar* MathUtils::vectorRandomSelection(const vector<NodeStar*> &nodes){
+	//	std::vector<NodeStar*>::const_iterator start = nodes.begin();
+	//	std::vector<NodeStar*>::const_iterator end = nodes.end();
+	//	std::random_device rd;
+	//	std::mt19937 generator(rd());
+	//	std::template uniform_int_distribution<> distribution(0, std::distance(start, end) - 1);
+	//	std::template advance(start, distribution(generator));
+	//	return (*start);
+	//}; 
+private:
+};
+
+#endif /* MATHUTILS_H */
+
+
